@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+export PYBUILD_NAME=abstract-rendering
+
+%:
+	dh $@ --with python2,python3,sphinxdoc --buildsystem=pybuild
+
+override_dh_auto_build:
+	dh_auto_build
+	PYTHON=. http_proxy='127.0.0.1:9' sphinx-build -N -bhtml sphinx/ build/html
+
+override_dh_auto_install:
+	dh_auto_install
+	dh_numpy
+	dh_numpy3

@@ -1,0 +1,5 @@
+python-abstract-rendering (0.5.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Diane Trout <diane@debian.org>  Fri, 04 Sep 2015 14:49:54 -0700

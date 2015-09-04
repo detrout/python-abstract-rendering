@@ -1,0 +1,3 @@
+version=3
+opts=filenamemangle=s/.*?(\d\S*)\.tar\.gz/abstract_rendering-$1\.tar\.gz/ \
+https://github.com/ContinuumIO/abstract_rendering/tags .*/?(\d\.\d\.\d)\.tar\.gz
