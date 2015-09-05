@@ -1,0 +1,13 @@
+Document: python-abstract-rendering-doc
+Title: Python abstract_rendering documentation
+Author: Joseph Cottam
+Abstract: Abstract rendering (AR) is a framework for analyzing
+ and improving visualizations. The basic idea is that visualizations
+ are useful when the pixels meaningfully correspond to source data. By
+ making that link more explicit, AR enables a number of useful
+ techniques for working with data of all sizes.
+Section: Programming/Python
+
+Format: HTML
+Index: /usr/share/doc/python-abstract-rendering-doc/html/index.html
+Files: /usr/share/doc/python-abstract-rendering-doc/html/*.html
