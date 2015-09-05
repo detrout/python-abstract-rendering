@@ -1,0 +1,26 @@
+Author: Diane Trout <diane@debian.org>
+Description: pybuild adds a multiarch extension to the
+ compiled libraries, abstract_rendering is using ctypes
+ to access them, and so wasn't computing a path that
+ included the multiarch part of the filename.
+--- a/abstract_rendering/fast_project.py
++++ b/abstract_rendering/fast_project.py
+@@ -14,10 +14,16 @@
+ import sys
+ 
+ import distutils.sysconfig
++
++multiarch = distutils.sysconfig.get_config_var('MULTIARCH')
+ so_ext = distutils.sysconfig.get_config_var('EXT_SUFFIX') \
+-        or distutils.sysconfig.get_config_var('SHLIB_SUFFIX') 
+-if not so_ext:
++        or distutils.sysconfig.get_config_var('SHLIB_SUFFIX')
++if so_ext:
++    so_ext = so_ext.replace('.so', '-' + multiarch + '.so')
++else:
+     so_ext = distutils.sysconfig.get_config_var('SO') or '.so'
++    so_ext = '.' + multiarch + so_ext
++
+ 
+ def _type_lib(lib):
+     from ctypes import c_void_p, c_size_t
