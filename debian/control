@@ -1,4 +1,4 @@
-Source: python-abstract-rendering
+Source: abstract-rendering
 Priority: optional
 Maintainer: Diane Trout <diane@debian.org>
 Build-Depends: debhelper (>= 9),
