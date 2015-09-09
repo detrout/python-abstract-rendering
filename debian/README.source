@@ -1,0 +1,6 @@
+Currently the package is personally maintained, however
+once the python-modules team finishes their move to git
+I hope to convert this to the new git repositories and
+will then move the package to team maintenance.
+
+ -- Diane Trout <diane@debian.org>, Tue,  8 Sep 2015 21:39:52 -0700
